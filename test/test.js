@@ -27,6 +27,11 @@ describe("Phrase", function () {
             let noLetters = new Phrase("1234.56");
             assert.strictEqual(noLetters.letters(), "");
         });
+
+        it("should return false for an empty string", function () {
+            let emptyPhrase = new Phrase("");
+            assert(!emptyPhrase.palindrome());
+        });
     });
 
     describe("#letters", function () {
